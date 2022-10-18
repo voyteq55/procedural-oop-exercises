@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         double a = 4;
@@ -7,7 +9,10 @@ public class Main {
         double x = najwieksza(a, b, c);
         System.out.println("najwieksza liczba to " + x);
 
-        narysuj_okrag(25);
+        System.out.print("wpisz dlugosc promienia kola: ");
+        Scanner scanner = new Scanner(System.in);
+        int r = scanner.nextInt();
+        narysuj_kolo(r);
     }
 
     private static double najwieksza(double a, double b, double c) {
@@ -17,7 +22,7 @@ public class Main {
         return Math.max(b, c);
     }
 
-    private static void narysuj_okrag(int r) {
+    private static void narysuj_kolo(int r) {
         for (int i = -r; i <= r; i++) {
             for (int j = -r; j <= r; j++) {
                 if (i*i + j*j <= (r+0.1)*(r+0.1)) {
