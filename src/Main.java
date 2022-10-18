@@ -17,9 +17,15 @@ public class Main {
 
     private static double najwieksza(double a, double b, double c) {
         if (a > b) {
-            return Math.max(a, c);
+            if (a > c) {
+                return a;
+            }
+            return c;
         }
-        return Math.max(b, c);
+        if (b > c) {
+            return b;
+        }
+        return c;
     }
 
     private static void narysuj_kolo(int r) {
