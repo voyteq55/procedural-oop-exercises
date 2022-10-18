@@ -25,8 +25,13 @@ public class Main {
     private static void narysuj_kolo(int r) {
         for (int i = -r; i <= r; i++) {
             for (int j = -r; j <= r; j++) {
-                if (i*i + j*j <= (r+0.1)*(r+0.1)) {
+                int temp = i*i + j*j;
+                if (temp <= (r*0.33+0.1)*(r*0.33+0.1)) {
+                    System.out.print("#  ");
+                } else if (temp <= (r*0.66+0.1)*(r*0.66+0.1)) {
                     System.out.print("*  ");
+                } else if (temp <= (r+0.1)*(r+0.1)) {
+                    System.out.print("'  ");
                 } else {
                     System.out.print("   ");
                 }
