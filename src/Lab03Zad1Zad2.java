@@ -1,16 +1,20 @@
 import java.util.Scanner;
 
-public class Main {
+public class Lab03Zad1Zad2 {
     public static void main(String[] args) {
-        double a = 4;
-        double b = 6;
-        double c = 123;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("wpisz liczbe a: ");
+        double a = scanner.nextInt();
+        System.out.print("wpisz liczbe b: ");
+        double b = scanner.nextInt();
+        System.out.print("wpisz liczbe c: ");
+        double c = scanner.nextInt();
 
         double x = najwieksza(a, b, c);
         System.out.println("najwieksza liczba to " + x);
 
         System.out.print("wpisz dlugosc promienia kola: ");
-        Scanner scanner = new Scanner(System.in);
+
         int r = scanner.nextInt();
         narysuj_kolo(r);
     }
