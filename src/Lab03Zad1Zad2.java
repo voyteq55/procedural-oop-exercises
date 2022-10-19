@@ -3,6 +3,21 @@ import java.util.Scanner;
 public class Lab03Zad1Zad2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.print("wpisz number zadania (1 albo 2): ");
+        int zad_nr = scanner.nextInt();
+
+        if (zad_nr == 1) {
+            zad1();
+        } else if (zad_nr == 2) {
+            zad2();
+        } else {
+            System.out.print("nieprawidlowy numer :(");
+        }
+
+    }
+
+    private static void zad1() {
+        Scanner scanner = new Scanner(System.in);
         System.out.print("wpisz liczbe a: ");
         double a = scanner.nextInt();
         System.out.print("wpisz liczbe b: ");
@@ -12,7 +27,10 @@ public class Lab03Zad1Zad2 {
 
         double x = najwieksza(a, b, c);
         System.out.println("najwieksza liczba to " + x);
+    }
 
+    private static void zad2() {
+        Scanner scanner = new Scanner(System.in);
         System.out.print("wpisz dlugosc promienia kola: ");
 
         int r = scanner.nextInt();
