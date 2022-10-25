@@ -29,6 +29,7 @@ hs_err_pid*
 # IntelliJ project files
 .idea
 *.iml
-out/
+out/*
 out
+out/production/LAB04.2/Prog/Prog.class
 gen
