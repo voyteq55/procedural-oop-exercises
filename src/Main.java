@@ -27,7 +27,7 @@ public class Main {
                 if (b != 0) {
                     return a / b;
                 }
-                return 0;
+                return Double.POSITIVE_INFINITY;
             default:
                 return 0;
         }
