@@ -1,4 +1,4 @@
-public class Main {
+public class Lab04Zad3 {
     public static void main(String[] args) {
         int n = 5;
         double x = 3;
@@ -17,8 +17,8 @@ public class Main {
         double sum = 0;
         double temp = 1;
         for (int i = 1; i <= n; i++) {
-            sum += temp * x / i;
             temp = temp * x;
+            sum += temp / i;
         }
         return sum;
     }
