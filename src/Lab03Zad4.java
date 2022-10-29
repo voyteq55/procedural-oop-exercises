@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Lab03Zad4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("podaj liczbe n: ");
