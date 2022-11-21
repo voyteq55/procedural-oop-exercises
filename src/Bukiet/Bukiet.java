@@ -1,5 +1,7 @@
 package Bukiet;
 
+import Florysta.Florysta;
+
 public class Bukiet {
     private Kwiat kwiat;
     private boolean dostepny = false;
@@ -30,5 +32,13 @@ public class Bukiet {
 
     public String getStan() {
         return "nazwa kwiatu: " + kwiat.getNazwa() + ", dostepny: " + dostepny;
+    }
+
+    public void jestwKwiaciarni() {
+        Florysta.tworzBukiet(this);
+    }
+
+    public void brakwKwiaciarni() {
+        Florysta.sprzedajBukiet(this);
     }
 }
