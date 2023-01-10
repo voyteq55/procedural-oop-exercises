@@ -3,7 +3,9 @@ package Ciasto;
 import Jablko.Jablko;
 import Sliwka.Sliwka;
 
-public abstract class Ciasto {
+import java.io.Serializable;
+
+public abstract class Ciasto implements Serializable {
     private String algorytmInfoJablko = "";
     private String algorytmInfoSliwka = "";
     protected String nazwaCiasta;

@@ -1,6 +1,8 @@
 package Jablko;
 
-public class Cwiartki implements Jablko{
+import java.io.Serializable;
+
+public class Cwiartki implements Jablko, Serializable {
 
     @Override
     public String przygotowanieJablka() {

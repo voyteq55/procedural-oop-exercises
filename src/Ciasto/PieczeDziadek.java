@@ -1,6 +1,8 @@
 package Ciasto;
 
-public class PieczeDziadek extends Ciasto {
+import java.io.Serializable;
+
+public class PieczeDziadek extends Ciasto implements Serializable {
     public PieczeDziadek(String nazwaCiasta) {
         super(nazwaCiasta);
     }
