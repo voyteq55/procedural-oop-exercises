@@ -1,8 +1,4 @@
-package Model;
-
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class BreakfastOptionCheckbox extends JCheckBox {
     private String optionName;
@@ -23,15 +19,7 @@ public class BreakfastOptionCheckbox extends JCheckBox {
         return optionName;
     }
 
-    public void setOptionName(String optionName) {
-        this.optionName = optionName;
-    }
-
     public double getCost() {
         return cost;
-    }
-
-    public void setCost(double cost) {
-        this.cost = cost;
     }
 }

@@ -1,7 +1,3 @@
-package View;
-
-import Model.BreakfastOptionCheckbox;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
