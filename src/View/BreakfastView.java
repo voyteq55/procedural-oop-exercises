@@ -4,6 +4,8 @@ import Model.BreakfastOptionCheckbox;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class BreakfastView extends JFrame {
@@ -16,7 +18,6 @@ public class BreakfastView extends JFrame {
 
     public BreakfastView() {
         super();
-//        this.setLayout(new BoxLayout(this.getContentPane(), BoxLayout.X_AXIS));
         this.setLayout(new GridLayout(1,2));
 
         setupPanel1();
@@ -25,7 +26,7 @@ public class BreakfastView extends JFrame {
         this.add(panel1);
         this.add(panel2);
 
-        this.setSize(400, 300);
+        this.setSize(400, 200);
         this.setTitle("Breakfast");
         this.setResizable(false);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -35,7 +36,6 @@ public class BreakfastView extends JFrame {
     private void setupPanel1() {
         panel1 = new JPanel();
         panel1.setLayout(new BoxLayout(panel1, BoxLayout.Y_AXIS));
-        panel1.setBackground(Color.BLUE);
 
         panel1.add(new JLabel("Menu"));
 
@@ -50,14 +50,13 @@ public class BreakfastView extends JFrame {
         }
 
         acceptButton = new JButton("Accept");
+        acceptButton.addActionListener(new AcceptButtonActionListener());
         panel1.add(acceptButton);
     }
 
     private void setupPanel2() {
         panel2 = new JPanel();
         panel2.setLayout(new BoxLayout(panel2, BoxLayout.Y_AXIS));
-
-        panel2.setBackground(Color.RED);
 
         panel2.add(new JLabel("My breakfast"));
         selectedBreakfastTextField = new JTextField();
@@ -66,6 +65,22 @@ public class BreakfastView extends JFrame {
         panel2.add(new JLabel("Total cost"));
         totalCostTextField = new JTextField();
         panel2.add(totalCostTextField);
+    }
 
+    class AcceptButtonActionListener implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            double totalCost = 0;
+            StringBuffer selectedBreakfast = new StringBuffer();
+            for (BreakfastOptionCheckbox checkbox : breakfastOptionCheckboxes) {
+                if (checkbox.isSelected()) {
+                    totalCost += checkbox.getCost();
+                    selectedBreakfast.append(checkbox.getOptionName()).append(", ");
+                }
+            }
+            totalCostTextField.setText(String.valueOf(totalCost));
+            selectedBreakfastTextField.setText(selectedBreakfast.toString());
+        }
     }
 }
