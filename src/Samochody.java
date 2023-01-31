@@ -105,21 +105,6 @@ public class Samochody {
 
 
     public static void main(String[] args) {
-//        Samochody auta = new Samochody();
-//        auta.dodajSamochodOsobowy("Fiat", 10000, 1236182736, false, "Punto", 1231);
-//        auta.dodajSamochodCiezarowy("AAA", 20000, 45246136, false, "BBB", 1790, true);
-//        auta.dodajSamochodOsobowy("AAA", 100, 76172361, true, "DDD", 17);
-//        auta.dodajSamochodCiezarowy("CCC", 5000, 345626, false, "EEE", 430, false);
-//
-//        auta.wyswietlWszystkieAuta();
-//
-//        auta.ustawSposobSortowania(new SortujWedlugMarekPotemLiczbyKilometrow());
-//        auta.posortujOrazWyswietlSamochody();
-//
-//        auta.ustawSposobSortowania(new SortujWedlugLiczbyKilometrow());
-//        auta.posortujOrazWyswietlSamochody();
-//
-//        auta.wyswietlNajwiekszeZuzycie();
         Samochody auta = new Samochody();
 
         scanner = new Scanner(System.in);
@@ -176,13 +161,4 @@ public class Samochody {
         return scanner.nextInt();
     }
 
-//    private static void dodajSamochodyOsobowe() {
-//        auta.dodajSamochodOsobowy("Fiat", 10000, 1236182736, false, "Punto", 1231);
-//        auta.dodajSamochodOsobowy("AAA", 100, 76172361, true, "DDD", 17);
-//    }
-//
-//    private static void dodajSamochodyCiezarowe() {
-//        auta.dodajSamochodCiezarowy("AAA", 20000, 45246136, false, "BBB", 1790, true);
-//        auta.dodajSamochodCiezarowy("CCC", 5000, 345626, false, "EEE", 430, false);
-//    }
 }
