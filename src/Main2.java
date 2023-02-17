@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Main {
+public class Main2 {
     public static void main(String[] args) {
         int n = 10;
         Konto[] bank = new Konto[n];
