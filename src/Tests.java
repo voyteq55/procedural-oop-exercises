@@ -1,4 +1,4 @@
-public class Main {
+public class Tests {
     private static final int N_OF_ITERATIONS = 10000;
 
     public static void main(String[] args) {
